@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error 405</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #ff6b6b, #f4f4f4);
+            color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .error-container {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .error-container h1 {
+            font-size: 3rem;
+            color: #ff6b6b;
+            margin: 0;
+        }
+
+        .error-container p {
+            font-size: 1.25rem;
+            margin: 1rem 0;
+        }
+
+        .error-container .icon {
+            font-size: 4rem;
+            color: #ff6b6b;
+            margin-bottom: 1rem;
+        }
+
+        .error-container a, .error-container button {
+            display: inline-block;
+            background: #ff6b6b;
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            margin: 1rem 0;
+            text-decoration: none;
+            font-size: 1rem;
+            border-radius: 5px;
+            transition: background 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .error-container a:hover, .error-container button:hover {
+            background: #e64c4c;
+        }
+
+        .error-container .contact-link {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .error-container .contact-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <div class="icon">
+            <i class="fas fa-exclamation-triangle"></i>
+        </div>
+        <h1>Error 405</h1>
+        <p>This page isn’t working. If the problem continues, contact the site owner.</p>
+        <p>For more help, email us at <a href="mailto:benardodero21@gmail.com" class="contact-link">benardodero21@gmail.com</a>.</p>
+        <button onclick="window.history.back()">Go Back</button>
+        <a href="/">Return to Homepage</a>
+    </div>
+</body>
+</html>
