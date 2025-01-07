@@ -104,15 +104,11 @@
     }
 }
 
-
         .section-title {
             text-align: center;
             margin-bottom: 2rem;
             font-weight: bold;
         }
-
-
-
 
         .projects-section {
             background: linear-gradient(to bottom right, #2b5876, #4e4376); /* Gradient */
@@ -173,12 +169,6 @@
             padding: 20px;
         }
         
-
-
-
-
-
-
         .projects-item {
             transition: transform 0.3s;
         }
@@ -545,16 +535,6 @@ nav .d-flex a:hover img.logo {
 nav ul.nav {
     list-style: none;
     display: flex;
-    gap: 1.5rem; /* Space between links */
-    margin: 0;
-    padding: 0;
-}
-
-
-/* Navigation Links */
-nav ul.nav {
-    list-style: none;
-    display: flex;
     gap: 1.5rem;
     margin: 0;
     padding: 0;
@@ -572,8 +552,8 @@ nav ul.nav li.nav-item a.nav-link {
 }
 
 nav ul.nav li.nav-item a.nav-link:hover {
-    color: #ff0000; /* Red accent on hover */
-    border-bottom: 2px solid #ff0000; /* Underline effect on hover */
+    color: #ff0000; 
+    border-bottom: 2px solid #ff0000; 
 }
 
 /* Hidden Navigation for Mobile */
@@ -581,7 +561,7 @@ nav ul.nav {
     position: fixed;
     top: 70px;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.95); /* Semi-transparent black */
+    background-color: rgba(0, 0, 0, 0.95); 
     flex-direction: column;
     gap: 1rem;
     padding: 1rem 2rem;
@@ -601,44 +581,36 @@ nav ul.nav.open {
 /* Responsive Design */
 @media (max-width: 768px) {
     .menu-icon {
-        display: flex; /* Show the hamburger icon in mobile view */
+        display: flex; 
     }
 
     nav ul.nav {
-        display: flex; /* Ensure the navigation list is set to flex */
+        display: flex;
     }
 
     nav ul.nav li.nav-item a.nav-link {
         font-size: 1.2rem;
-        color: #fff; /* Maintain contrast on mobile */
+        color: #fff; 
     }
 }
 
 /* Desktop and Larger Screens */
 @media (min-width: 769px) {
     nav ul.nav {
-        position: static; /* Reset position for desktop view */
-        transform: none; /* Remove any transformations */
-        opacity: 1; /* Ensure visibility */
-        visibility: visible; /* Ensure links are visible */
-        flex-direction: row; /* Display links in a horizontal row */
-        background-color: transparent; /* Remove background for desktop view */
-        padding: 0; /* Remove extra padding */
-        box-shadow: none; /* Remove shadow for desktop view */
+        position: static; 
+        transform: none; 
+        opacity: 1; 
+        visibility: visible; 
+        flex-direction: row; 
+        background-color: transparent; 
+        padding: 0; 
+        box-shadow: none; 
     }
 
     .menu-icon {
         display: none; /* Hide hamburger icon in desktop view */
     }
 }
-
-
-
-
-
-
-
-
 .hidden {
     opacity: 0;
     transform: translateY(10px);
@@ -670,8 +642,8 @@ nav ul.nav.open {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-size: 200%;
-    animation: textGradient 5s linear infinite; /* Gradient effect */
-    overflow: hidden; /* Ensure no overflow during animation */
+    animation: textGradient 5s linear infinite; 
+    overflow: hidden; 
 }
 
 .text-content {
@@ -694,11 +666,11 @@ nav ul.nav.open {
 @keyframes fadeInText {
     0% {
         opacity: 0;
-        transform: translateY(30px); /* Starts slightly lower */
+        transform: translateY(30px); 
     }
     100% {
         opacity: 1;
-        transform: translateY(0); /* Moves into place */
+        transform: translateY(0);
     }
 }
 
@@ -745,7 +717,7 @@ nav ul.nav.open {
     width: 100%;
 }
 .skill-bar-fill {
-    width: 75%; /* Adjust based on data */
+    width: 75%; 
 }
 
 /* Responsive contact section */
@@ -777,8 +749,6 @@ footer {
         background-color: transparent;
     }
 }
-
-
     </style>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
@@ -797,7 +767,7 @@ footer {
                     preloader.style.display = "none";
                     mainContent.style.display = "block";
                 }
-            }, 30); // Adjust speed by changing the interval duration
+            }, 30); 
         });
 
         document.addEventListener("DOMContentLoaded", () => {
@@ -830,7 +800,7 @@ footer {
         
             const typeText = (element, text, callback) => {
                 let index = 0;
-                element.textContent = ""; // Clear initial text
+                element.textContent = ""; 
                 const interval = setInterval(() => {
                     element.textContent += text.charAt(index);
                     element.classList.add("typing");
@@ -840,17 +810,17 @@ footer {
                         element.classList.remove("typing");
                         if (callback) callback();
                     }
-                }, 50); // Speed of typing
+                }, 50); 
             };
         
             const handleAnimation = (entries, observer) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
-                        observer.unobserve(entry.target); // Stop observing after triggering
+                        observer.unobserve(entry.target); 
                         let delay = 0;
                         animateElements.forEach((element) => {
-                            const text = element.textContent; // Store original text
-                            element.textContent = ""; // Clear for typing effect
+                            const text = element.textContent; 
+                            element.textContent = ""; 
                             setTimeout(() => {
                                 typeText(element, text, () => {
                                     if (element === animateElements[animateElements.length - 1]) {
@@ -860,14 +830,14 @@ footer {
                                     }
                                 });
                             }, delay);
-                            delay += text.length * 50 + 500; // Delay for each element
+                            delay += text.length * 50 + 500; 
                         });
                     }
                 });
             };
         
             const observer = new IntersectionObserver(handleAnimation, {
-                threshold: 0.5, // Trigger when 50% of the section is visible
+                threshold: 0.5, 
             });
         
             observer.observe(aboutSection);
@@ -875,9 +845,9 @@ footer {
 
         document.addEventListener("DOMContentLoaded", () => {
             const nameElement = document.getElementById("looping-name");
-            const nameText = "Benard Odero"; // Text to type
-            let isTyping = true; // Tracks whether we are typing or erasing
-            let index = 0; // Tracks the current position in the text
+            const nameText = "Benard Odero"; 
+            let isTyping = true; 
+            let index = 0; 
         
             const typeEraseLoop = () => {
                 if (isTyping) {
@@ -886,7 +856,7 @@ footer {
                     index++;
                     if (index > nameText.length) {
                         isTyping = false;
-                        setTimeout(typeEraseLoop, 1500); // Pause before erasing
+                        setTimeout(typeEraseLoop, 1500); 
                         return;
                     }
                 } else {
@@ -895,11 +865,11 @@ footer {
                     index--;
                     if (index < 0) {
                         isTyping = true;
-                        setTimeout(typeEraseLoop, 1000); // Pause before typing again
+                        setTimeout(typeEraseLoop, 1000); 
                         return;
                     }
                 }
-                setTimeout(typeEraseLoop, 200); // typing speed
+                setTimeout(typeEraseLoop, 200); 
             };
         
             // Start the loop
@@ -1000,7 +970,7 @@ footer {
                 <div class="card projects-item">
                     <img src="lesa_comb.png" class="card-img-top" alt="Project 1">
                     <div class="card-body">
-                        <h5 class="card-title" style="color: red;">Lesson Allocation System</h5>
+                        <h5 class="card-title" style="color: red;">Lesson Tracking and Allocation System</h5>
                         <p class="card-text short-description">
                             This is a comprehensive platform designed to manage lesson allocations efficiently within an educational institution.
                         </p>
@@ -1044,9 +1014,7 @@ footer {
         </div>
     </div>
 </section>
-
-
-
+    
 <section id="skills" class="py-5">
     <div class="container">
         <h2 class="section-title">Skills</h2>
