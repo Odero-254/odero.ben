@@ -589,15 +589,23 @@ nav ul.nav.open {
     position: fixed;
     bottom: 20px;
     left: 20px;
-    width: 50px;
-    height: 50px;
+    width: 60px; /* Slightly larger for better visibility */
+    height: 60px;
+    z-index: 9999; /* Ensures it stays on top of other elements */
+    background-color: #25D366; /* WhatsApp's green color for the background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow for a floating effect */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; /* Makes it fully circular */
+    cursor: pointer;
 }
 
 .whatsapp-link img {
-    width: 100%;
-    height: 100%;
+    width: 80%; /* Keeps some padding inside the circle */
+    height: 80%;
     border-radius: 50%;
-    z-index: 1000; 
+    object-fit: contain; /* Ensures the image scales well without distortion */
 }
 
 /* Responsive Design */
